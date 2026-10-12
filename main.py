@@ -14,13 +14,15 @@ def menu():
 
 def main():
     deposito = DepositoStrumenti("Deposito Strumenti Civico", "Alessandro Visconti")
+    # oggetto    classe
 
     while True:
         scelta = menu()
 
         if scelta == "1":
             nuovo_responsabile = input("Inserisci il nuovo responsabile: ")
-            # TODO: Aggiorna responsabile nel sistema
+            deposito.responsabile = nuovo_responsabile # accede tramite il setter per modificare
+            print(f"il nuovo responsabile è: {deposito.responsabile}")
 
         elif scelta == "2":
             while True:
